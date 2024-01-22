@@ -12,9 +12,11 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Linting
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `npm run lint` to lint the project. This will run [eslint](https://eslint.org/). It is configured to be run automatically before every commit.
+
+Follow the prettier rules in `.prettierrc.js`.
 
 ## Committing
 
