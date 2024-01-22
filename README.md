@@ -18,6 +18,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Committing
 
+> DO NOT COMMIT WITH `git commit -m "message"`. 
+> 
+> Use `npm run commit` instead. This will run [commitizen](https://github.com/commitizen) and prompt you to fill out a commit message.
+
 Before every commit, husky will run unit tests. If it fails, the commit will be aborted.
 
 ## Build
@@ -27,6 +31,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+Tests will be executed by Firefox. If you want to use a different browser, you can change it in `karma.conf.js`.
 
 ## Running end-to-end tests
 
