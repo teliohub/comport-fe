@@ -18,8 +18,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Committing
 
-> DO NOT COMMIT WITH `git commit -m "message"`. 
-> 
+> DO NOT COMMIT WITH `git commit -m "message"`.
+>
 > Use `npm run commit` instead. This will run [commitizen](https://github.com/commitizen) and prompt you to fill out a commit message.
 
 Before every commit, husky will run unit tests. If it fails, the commit will be aborted.
