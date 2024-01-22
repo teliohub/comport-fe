@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.7.
 
+## Prerequisites
+
+- [Node.js](https://nodejs.org/en/) (v18.13.0)
+- [Angular CLI](https://angular.io/cli) (v17.1.0)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/) (v121.0)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
@@ -9,6 +15,10 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Committing
+
+Before every commit, husky will run unit tests. If it fails, the commit will be aborted.
 
 ## Build
 
