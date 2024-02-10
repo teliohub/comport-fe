@@ -30,8 +30,24 @@
             ],
             "styles": ["src/styles.scss"],
             "scripts": [],
+            "aot": true,
+            "verbose": true,
+            "progress": true,
+            "statsJson": true,
+            "sourceMap": true,
+            "vendorChunk": true,
+            "commonChunk": true,
+            "namedChunks": true,
+            "optimization": true,
             "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "buildOptimizer": true,
+            "extractLicenses": true,
+            "deleteOutputPath": true,
+            "subresourceIntegrity": true,
+            "outputHashing": "all",
+            "ngswConfigPath": "ngsw-config.json",
+            "webWorkerTsConfig": "tsconfig.worker.json",
+            "stylePreprocessorOptions": {}
           },
           "configurations": {
             "production": {
@@ -47,15 +63,13 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "statsJson": false
             },
             "development": {
-              "buildOptimizer": false,
+              "outputHashing": "none",
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "subresourceIntegrity": false
             }
           },
           "defaultConfiguration": "production"
@@ -91,7 +105,8 @@
             ],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "karmaConfig": "karma.conf.js"
+            "karmaConfig": "karma.conf.js",
+            "webWorkerTsConfig": "tsconfig.worker.json"
           }
         }
       }
