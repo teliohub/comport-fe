@@ -28,4 +28,4 @@ RUN npm run build -- --configuration=production
 RUN node ./utils/brotli-compress.js
 RUN npm prune --production
 
-CMD ["http-server", "-p", "4200", "--brotli", "--index", "index.html", "./dist/comport"]
+CMD ["http-server", "-p", "4200", "--brotli", "--index", '--log-ip', '--ssl', "index.html", "./dist/comport"]

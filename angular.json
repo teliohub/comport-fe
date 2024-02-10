@@ -76,6 +76,11 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "ssl": true,
+            "sslCert": ".conf/certificates/ssl/comport_key.pem",
+            "sslKey": ".conf/certificates/ssl/comport_cert_key.pem"
+          },
           "configurations": {
             "production": {
               "buildTarget": "comport:build:production"
