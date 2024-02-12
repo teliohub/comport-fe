@@ -3,8 +3,12 @@
   "root": true,
   "overrides": [
     {
-      "files": ["*.ts"],
-      "extends": ["plugin:prettier/recommended"],
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
       "rules": {
         "prettier/prettier": [
           "error",
@@ -15,14 +19,24 @@
       }
     },
     {
-      "files": ["*.html"],
-      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
       "rules": {}
     },
     {
-      "files": ["*.html"],
-      "excludedFiles": ["*inline-template-*.component.html"],
-      "extends": ["plugin:prettier/recommended"],
+      "files": [
+        "*.html"
+      ],
+      "excludedFiles": [
+        "*inline-template-*.component.html"
+      ],
+      "extends": [
+        "plugin:prettier/recommended"
+      ],
       "rules": {
         "prettier/prettier": [
           "error",
@@ -31,6 +45,14 @@
           }
         ]
       }
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "extends": [
+        "plugin:@ngrx/all-requiring-type-checking"
+      ]
     }
   ]
 }

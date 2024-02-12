@@ -6,11 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 - [Node.js](https://nodejs.org/en/) (v18.13.0)
 - [Angular CLI](https://angular.io/cli) (v17.1.0)
-- [Firefox](https://www.mozilla.org/en-US/firefox/new/) (v121.0)
+- [Any shell](https://git-scm.com/downloads) you can use the git's one
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. The application will be available on `https://localhost:4200/`.
+
+## Production server
+
+Run `npm run start:prod` for a prod server. The application will be available on `https://localhost:4200/`.
 
 ## Linting
 
@@ -28,7 +32,7 @@ Before every commit, husky will run unit tests. If it fails, the commit will be 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build` to build the project. In addition to the standard configuration, we've made some enhancements for the production environment. We apply Brotli compression to the built files for improved performance, and we use the [http-server](https://www.npmjs.com/package/http-server) to serve these files.
 
 ## Running unit tests
 

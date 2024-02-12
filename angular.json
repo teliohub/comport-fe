@@ -23,9 +23,31 @@
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.webmanifest"
+            ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [],
+            "aot": true,
+            "verbose": true,
+            "progress": true,
+            "statsJson": true,
+            "sourceMap": true,
+            "vendorChunk": true,
+            "commonChunk": true,
+            "namedChunks": true,
+            "optimization": true,
+            "serviceWorker": true,
+            "buildOptimizer": true,
+            "extractLicenses": true,
+            "deleteOutputPath": true,
+            "subresourceIntegrity": false,
+            "outputHashing": "all",
+            "ngswConfigPath": "ngsw-config.json",
+            "webWorkerTsConfig": "tsconfig.worker.json",
+            "stylePreprocessorOptions": {}
           },
           "configurations": {
             "production": {
@@ -41,21 +63,24 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "statsJson": false
             },
             "development": {
-              "buildOptimizer": false,
+              "outputHashing": "none",
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
-              "sourceMap": true,
-              "namedChunks": true
+              "subresourceIntegrity": false
             }
           },
           "defaultConfiguration": "production"
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "ssl": true,
+            "sslCert": ".conf/certificates/ssl/comport_key.pem",
+            "sslKey": ".conf/certificates/ssl/comport_cert_key.pem"
+          },
           "configurations": {
             "production": {
               "buildTarget": "comport:build:production"
@@ -78,13 +103,21 @@
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              "src/manifest.webmanifest"
+            ],
             "styles": ["src/styles.scss"],
             "scripts": [],
-            "karmaConfig": "karma.conf.js"
+            "karmaConfig": "karma.conf.js",
+            "webWorkerTsConfig": "tsconfig.worker.json"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
