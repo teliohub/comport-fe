@@ -7,6 +7,23 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - [Node.js](https://nodejs.org/en/) (v18.13.0)
 - [Angular CLI](https://angular.io/cli) (v17.1.0)
 - [Any shell](https://git-scm.com/downloads) you can use the git's one
+- [mkcert](https://github.com/FiloSottile/mkcert)
+
+# CREATE SSL certificates
+
+> **Important!**
+> 
+> Create the certificates only once! There is no need to create them every time!
+
+```shell
+mkcert -install
+```
+
+```shell
+mkcert -cert-file ssl/local-cert.pem -key-file ssl/local-key.pem localhost
+```
+
+> The certificate is at "./ssl/local-cert.pem" and the key at ".ssl/local-key.pem" ✅
 
 ## Development server
 

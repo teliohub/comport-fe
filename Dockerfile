@@ -19,7 +19,6 @@ COPY utils ./utils
 USER root
 RUN chown -R node:node /app
 RUN chmod +x ./utils/brotli-compress.js
-RUN chmod +x ./utils/certificates-generator.sh
 RUN npm i -g @angular/cli
 RUN npm install -g http-server
 
@@ -28,7 +27,6 @@ USER node
 RUN npm ci
 RUN npm run build -- --configuration=production
 RUN node ./utils/brotli-compress.js
-RUN ./utils/certificates-generator.sh
 RUN npm prune --production
 
 CMD ["http-server", "-p", "4200", "--brotli", "--index", "index.html", "--log-ip", "--ssl", "--cert", "./.conf/certificates/ssl/comport_key.pem", "--key", "./.conf/certificates/ssl/comport_key.pem", "./dist/comport"]

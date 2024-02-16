@@ -3,6 +3,10 @@
 .env
 .conf
 
+# SSL
+ssl/local-cert.pem
+ssl/local-key.pem
+
 # Compiled output
 /dist
 /tmp

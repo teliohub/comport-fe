@@ -3,12 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm run ssl:generate && ng serve",
+    "start": "ng serve --ssl true --ssl-cert ./ssl/local-cert.pem --ssl-key ./ssl/local-key.pem",
     "start:dev": "ng serve --configuration development",
     "start:prod": "docker build -t comport-fe -f Dockerfile . && docker run --name comport-fe -p 4200:4200 comport-fe",
     "commit": "cz",
     "build": "ng build",
-    "ssl:generate": "./utils/certificates-generator.sh",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "eslint . --ext .ts",

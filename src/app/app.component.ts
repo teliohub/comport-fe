@@ -12,11 +12,11 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     console.warn('ngOnInit');
     this._http
-      .post('http://localhost:8082/api/v1/user/register', {
+      .post('https://localhost:8082/api/v1/user/register', {
         firstName: 'admin',
         lastName: 'admin',
         password: '12345678aA',
-        email: 'admin123@abv.bg',
+        email: 'admsahdsa3@abv.bg',
       })
       .subscribe(console.warn, console.warn);
   }
